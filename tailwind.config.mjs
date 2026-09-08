@@ -5,18 +5,20 @@ export default {
     extend: {
       colors: {
         navy: {
-          DEFAULT: '#0B1F33',
-          light: '#14304A',
-          dark: '#071521',
+          DEFAULT: '#0B1C2C',
+          light: '#14324A',
+          dark: '#061018',
         },
         charcoal: {
           DEFAULT: '#2C333A',
           light: '#4A5259',
         },
         copper: {
-          DEFAULT: '#8B4E1F',
-          dark: '#6F3E18',
-          light: '#C4813A',
+          // Brand orange #E85D04 fails AA (~3.5:1) with white text on small UI.
+          // DEFAULT/dark are darkened for WCAG AA button text; light is brand orange for accents on navy.
+          DEFAULT: '#C54F03',
+          dark: '#A34202',
+          light: '#E85D04',
         },
       },
       fontFamily: {

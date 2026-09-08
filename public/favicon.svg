@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="8" fill="#0B1F33"/>
-  <path d="M8 20c0-2 2-4 4-4h4c2 0 4 2 4 4v2c0 2-2 4-4 4h-4c-2 0-4-2-4-4v-2z" fill="#C4813A"/>
-  <path d="M14 8h4v4h-4V8z" fill="#D49C5C"/>
-  <circle cx="16" cy="10" r="2" fill="#C4813A"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="O'Rourke Heating & Plumbing">
+  <rect width="32" height="32" rx="8" fill="#0B1C2C"/>
+  <path d="M16 6c2.8 3.2 4.5 5.8 4.5 8.2a4.5 4.5 0 1 1-9 0C11.5 11.8 13.2 9.2 16 6z" fill="#E85D04"/>
+  <path d="M16 11.2c1.2 1.5 1.9 2.7 1.9 3.8a1.9 1.9 0 1 1-3.8 0c0-1.1.7-2.3 1.9-3.8z" fill="#0B1C2C"/>
 </svg>

@@ -58,4 +58,4 @@ Repo: `https://github.com/oruaircs/orourkeheatingplumbing` (formerly `C14427818`
 
 ## Design
 
-Navy (#0B1F33), charcoal, white, copper accent (#8B4E1F). Fonts: **Fraunces** (headings) + **DM Sans** (body). Sticky mobile Call | WhatsApp bar (min 44px taps).
+Navy (#0B1C2C), charcoal, white, brand orange (#E85D04) with AA-safe button orange (#C54F03). Wordmark replaces the old circular badge. Fonts: **Fraunces** (headings) + **DM Sans** (body). Sticky mobile Call | WhatsApp bar (min 44px taps).
