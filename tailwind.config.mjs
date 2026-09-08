@@ -20,6 +20,11 @@ export default {
           dark: '#A34202',
           light: '#E85D04',
         },
+        // Plumbing blue from brand promo wordmark (HEATING orange, PLUMBING cyan-blue).
+        water: {
+          DEFAULT: '#0289D3',
+          light: '#1A9BE0',
+        },
       },
       fontFamily: {
         sans: ['"DM Sans"', 'system-ui', 'sans-serif'],

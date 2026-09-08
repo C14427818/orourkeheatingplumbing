@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactForm from '../components/ContactForm.astro';
-import { PHONE_TEL, PHONE_DISPLAY, WHATSAPP_URL, EMAIL } from '../lib/site';
+import { PHONE_TEL, PHONE_DISPLAY, WHATSAPP_URL, EMAIL, SITE_NAME, withBase } from '../lib/site';
 ---
 <BaseLayout
   title="Contact"
@@ -13,6 +13,18 @@ import { PHONE_TEL, PHONE_DISPLAY, WHATSAPP_URL, EMAIL } from '../lib/site';
       <p class="mt-3 max-w-2xl text-lg text-charcoal-light">
         Tell us what is going on — we will get back to you as soon as we can.
       </p>
+
+      <figure class="mt-8 overflow-hidden rounded-2xl shadow-md ring-1 ring-navy/10">
+        <img
+          src={withBase('contact-promo.webp')}
+          width="1254"
+          height="1254"
+          alt={`${SITE_NAME} — heating homes and keeping Ireland flowing; local, reliable plumbing and heating`}
+          class="h-auto w-full object-cover object-center"
+          decoding="async"
+          loading="lazy"
+        />
+      </figure>
 
       <div class="mt-10 grid gap-8 lg:grid-cols-5">
         <div class="space-y-4 lg:col-span-2">
