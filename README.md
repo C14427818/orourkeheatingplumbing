@@ -31,7 +31,9 @@ On every push to `main`, `.github/workflows/deploy.yml`:
 
 In the repo settings, enable Pages with Source: GitHub Actions.
 
-Site URL shape: https://oruaircs.github.io/orourkeheatingplumbing/
+Site URL shape: https://coruairc.github.io/orourkeheatingplumbing/
+
+Repo: `https://github.com/coruairc/orourkeheatingplumbing` (formerly under `C14427818`; use this clone URL going forward).
 
 (`astro.config.mjs` sets `site` and `base` accordingly.)
 
