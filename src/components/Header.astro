@@ -4,31 +4,23 @@ const pathname = Astro.url.pathname;
 const homeHref = withBase('');
 const contactHref = withBase('contact/');
 const isHome = pathname === homeHref || pathname === withBase('index.html') || pathname.endsWith('/orourkeheatingplumbing') || pathname.endsWith('/orourkeheatingplumbing/');
-const markSrc = withBase('logo-mark.webp');
+const logoSrc = withBase('logo-header.webp');
 ---
 <header class="sticky top-0 z-40 border-b border-white/10 bg-navy text-white">
   <div class="container-narrow flex items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
     <a
       href={homeHref}
-      class="group flex min-h-[44px] items-center gap-2.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-copper sm:gap-3"
+      class="group flex min-h-[44px] max-w-[min(100%,18rem)] items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-copper sm:max-w-[22rem]"
       aria-label={SITE_NAME}
     >
       <img
-        src={markSrc}
-        width="168"
-        height="168"
+        src={logoSrc}
+        width="1214"
+        height="298"
         alt=""
-        class="h-10 w-10 shrink-0 object-contain sm:h-11 sm:w-11"
+        class="h-11 w-auto max-w-full object-contain object-left sm:h-12"
         decoding="async"
       />
-      <span class="flex flex-col leading-none">
-        <span class="font-display text-lg font-semibold tracking-tight text-white sm:text-xl">O&apos;Rourke</span>
-        <span class="mt-0.5 text-[10px] font-bold uppercase tracking-[0.12em] sm:text-[11px]">
-          <span class="text-copper-light">HEATING</span>
-          <span class="text-white">&amp;</span>
-          <span class="text-water">PLUMBING</span>
-        </span>
-      </span>
     </a>
     <nav class="hidden items-center gap-6 sm:flex" aria-label="Primary">
       <a
