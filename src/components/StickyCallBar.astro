@@ -1,0 +1,28 @@
+---
+import { PHONE_TEL, PHONE_DISPLAY, WHATSAPP_URL } from '../lib/site';
+---
+<nav
+  class="fixed inset-x-0 bottom-0 z-50 border-t border-navy/10 bg-white/95 backdrop-blur md:hidden"
+  aria-label="Quick contact"
+  style="padding-bottom: env(safe-area-inset-bottom, 0);"
+>
+  <div class="grid grid-cols-2 gap-2 p-2">
+    <a
+      href={`tel:${PHONE_TEL}`}
+      class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg bg-navy px-3 py-3 text-sm font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-copper"
+    >
+      <span aria-hidden="true">📞</span>
+      Call
+      <span class="sr-only"> {PHONE_DISPLAY}</span>
+    </a>
+    <a
+      href={WHATSAPP_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg bg-copper px-3 py-3 text-sm font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy"
+    >
+      <span aria-hidden="true">💬</span>
+      WhatsApp
+    </a>
+  </div>
+</nav>

@@ -1,0 +1,17 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  icon?: string;
+}
+const { title, description } = Astro.props;
+---
+<article class="flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-navy/10 transition hover:shadow-md hover:ring-copper/30">
+  <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-navy text-copper" aria-hidden="true">
+    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.53 2.36a.75.75 0 01-.99-.87l1.04-5.72L2.3 7.4a.75.75 0 01.42-1.28l5.74-.83L11.03.5a.75.75 0 011.34 0l2.57 5.0 5.74.83a.75.75 0 01.42 1.28l-4.64 4.52 1.04 5.72a.75.75 0 01-.99.87l-5.53-2.36z" />
+    </svg>
+  </div>
+  <h3 class="font-display text-xl font-semibold text-navy">{title}</h3>
+  <p class="mt-2 flex-1 text-charcoal-light leading-relaxed">{description}</p>
+</article>

@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TrustRow from '../components/TrustRow.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import {
+  SITE_NAME,
+  SITE_TAGLINE,
+  PHONE_TEL,
+  PHONE_DISPLAY,
+  WHATSAPP_URL,
+  withBase,
+} from '../lib/site';
+
+const services = [
+  { title: 'Emergency plumbing', description: 'Burst taps, sudden leaks, no water — get in touch and we will talk through what is urgent.' },
+  { title: 'Blocked drains', description: 'Slow sinks, outdoor gullies and stubborn blockages cleared properly, not just temporarily.' },
+  { title: 'Boilers & heating', description: 'Servicing, breakdowns and heating that will not warm the house the way it should.' },
+  { title: 'Burst pipes / leaks', description: 'Find the leak, stop the damage, and leave the pipework sound.' },
+  { title: 'Bathrooms', description: 'Suites, showers, tiling prep and the plumbing behind a tidy finish.' },
+  { title: 'Immersion & hot water', description: 'Immersion switches, cylinders and hot water that has gone cold or unreliable.' },
+];
+
+const steps = [
+  { n: '1', title: 'Call or message', body: 'Ring or WhatsApp with a short description of the job and where you are.' },
+  { n: '2', title: 'Diagnose', body: 'We talk it through, ask the right questions, and agree what needs doing.' },
+  { n: '3', title: 'Fix', body: 'We turn up, do the work cleanly, and leave you with heating or water sorted.' },
+];
+---
+<BaseLayout>
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-navy text-white" aria-labelledby="hero-heading">
+    <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+      <div class="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-copper/20 blur-3xl"></div>
+      <div class="absolute -bottom-32 -left-16 h-80 w-80 rounded-full bg-copper/10 blur-3xl"></div>
+      <svg class="absolute inset-0 h-full w-full opacity-[0.07]" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M40 0H0V40" fill="none" stroke="white" stroke-width="1" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+      </svg>
+    </div>
+    <div class="container-narrow relative section-pad !pb-20 !pt-16 lg:!pt-24">
+      <p class="text-sm font-semibold uppercase tracking-widest text-copper-light">Heating &amp; plumbing</p>
+      <h1 id="hero-heading" class="mt-3 max-w-3xl font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+        {SITE_NAME}
+      </h1>
+      <p class="mt-5 max-w-2xl text-xl text-white/90 sm:text-2xl">
+        Reliable heating and plumbing — done properly, explained plainly.
+      </p>
+      <p class="mt-4 max-w-xl text-base text-white/70 sm:text-lg">
+        {SITE_TAGLINE}
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href={`tel:${PHONE_TEL}`} class="btn-copper min-h-[48px] text-lg">
+          Call {PHONE_DISPLAY}
+        </a>
+        <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" class="btn-outline-light min-h-[48px] text-lg">
+          WhatsApp us
+        </a>
+      </div>
+      <p class="mt-3 text-xs text-white/50">Phone number is a placeholder until confirmed.</p>
+    </div>
+  </section>
+
+  <TrustRow />
+
+  <!-- Services -->
+  <section class="section-pad bg-white" aria-labelledby="services-heading">
+    <div class="container-narrow">
+      <h2 id="services-heading" class="font-display text-3xl font-semibold text-navy sm:text-4xl">What we do</h2>
+      <p class="mt-3 max-w-2xl text-lg text-charcoal-light">
+        Everyday plumbing through to heating jobs. Clear communication before we start.
+      </p>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {services.map((s) => (
+          <ServiceCard title={s.title} description={s.description} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section-pad bg-slate-50" aria-labelledby="how-heading">
+    <div class="container-narrow">
+      <h2 id="how-heading" class="font-display text-3xl font-semibold text-navy sm:text-4xl">How it works</h2>
+      <ol class="mt-10 grid gap-6 md:grid-cols-3">
+        {steps.map((step) => (
+          <li class="rounded-2xl bg-white p-6 ring-1 ring-navy/10">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-copper font-display text-lg font-bold text-white">{step.n}</span>
+            <h3 class="mt-4 font-display text-xl font-semibold text-navy">{step.title}</h3>
+            <p class="mt-2 text-charcoal-light leading-relaxed">{step.body}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- Service area -->
+  <section class="section-pad bg-white" aria-labelledby="area-heading">
+    <div class="container-narrow max-w-3xl">
+      <h2 id="area-heading" class="font-display text-3xl font-semibold text-navy sm:text-4xl">Where we work</h2>
+      <p class="mt-4 text-lg leading-relaxed text-charcoal-light">
+        Based in Dublin. We cover the whole country for bigger jobs.
+      </p>
+      <p class="mt-3 text-charcoal-light leading-relaxed">
+        Local calls around the city and county are our bread and butter. For larger installs or multi-day work, we will travel further across Ireland — just ask when you get in touch.
+      </p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section-pad bg-navy text-white" aria-labelledby="about-heading">
+    <div class="container-narrow max-w-3xl">
+      <h2 id="about-heading" class="font-display text-3xl font-semibold sm:text-4xl">About us</h2>
+      <p class="mt-4 text-lg leading-relaxed text-white/85">
+        O&apos;Rourke Heating &amp; Plumbing is a brother-run Irish firm. No corporate script — just two tradespeople who show up, explain the job in plain English, and leave things working the way they should.
+      </p>
+      <p class="mt-3 text-white/70 leading-relaxed">
+        We are insured, tidy on site, and honest about what a job will take. If we are not the right fit, we will say so.
+      </p>
+      <a href={withBase('contact/')} class="btn-copper mt-8 inline-flex">Get in touch</a>
+    </div>
+  </section>
+</BaseLayout>

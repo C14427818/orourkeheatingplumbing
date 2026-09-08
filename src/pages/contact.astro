@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { PHONE_TEL, PHONE_DISPLAY, WHATSAPP_URL, EMAIL } from '../lib/site';
+---
+<BaseLayout
+  title="Contact"
+  description="Call, WhatsApp or send a message to O'Rourke Heating & Plumbing in Dublin."
+>
+  <section class="section-pad bg-slate-50" aria-labelledby="contact-heading">
+    <div class="container-narrow">
+      <h1 id="contact-heading" class="font-display text-4xl font-semibold text-navy sm:text-5xl">Contact us</h1>
+      <p class="mt-3 max-w-2xl text-lg text-charcoal-light">
+        Tell us what is going on — we will get back to you as soon as we can.
+      </p>
+
+      <div class="mt-10 grid gap-8 lg:grid-cols-5">
+        <div class="space-y-4 lg:col-span-2">
+          <a
+            href={`tel:${PHONE_TEL}`}
+            class="flex min-h-[64px] items-center justify-center gap-3 rounded-2xl bg-navy px-6 py-5 text-center text-xl font-semibold text-white shadow-sm transition hover:bg-navy-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-copper"
+          >
+            <span aria-hidden="true">📞</span>
+            Call {PHONE_DISPLAY}
+          </a>
+          <p class="text-center text-xs text-charcoal-light">TODO PLACEHOLDER — confirm live number before go-live</p>
+
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex min-h-[56px] items-center justify-center gap-3 rounded-2xl bg-copper px-6 py-4 text-center text-lg font-semibold text-white shadow-sm transition hover:bg-copper-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy"
+          >
+            <span aria-hidden="true">💬</span>
+            Message on WhatsApp
+          </a>
+
+          <a
+            href={`mailto:${EMAIL}`}
+            class="flex min-h-[48px] items-center justify-center rounded-2xl border-2 border-navy/15 bg-white px-6 py-3 text-center font-semibold text-navy hover:border-copper/40"
+          >
+            {EMAIL}
+          </a>
+
+          <div class="rounded-2xl bg-white p-5 ring-1 ring-navy/10">
+            <h2 class="font-display text-lg font-semibold text-navy">Hours</h2>
+            <p class="mt-2 text-sm text-charcoal-light">
+              <!-- TODO PLACEHOLDER hours -->
+              Weekdays: 8:00–18:00 (placeholder)
+            </p>
+            <p class="mt-2 text-sm text-charcoal-light">
+              Emergencies: message or call and we will say if we can help the same day. We do not claim 24/7 nationwide cover.
+            </p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h2 class="mb-4 font-display text-2xl font-semibold text-navy">Send a message</h2>
+          <ContactForm />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

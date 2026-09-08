@@ -1,0 +1,35 @@
+---
+import { SITE_NAME, EMAIL, PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, withBase } from '../lib/site';
+const year = new Date().getFullYear();
+---
+<footer class="border-t border-white/10 bg-navy-dark pb-24 text-white md:pb-8">
+  <div class="container-narrow section-pad !py-12">
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <div>
+        <p class="font-display text-xl font-semibold">{SITE_NAME}</p>
+        <p class="mt-3 max-w-sm text-sm leading-relaxed text-white/70">
+          Brother-run heating and plumbing from Dublin. Straight talking, tidy work, and we will travel for the bigger jobs.
+        </p>
+      </div>
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-wide text-copper-light">Contact</p>
+        <ul class="mt-3 space-y-2 text-sm text-white/80">
+          <li><a class="hover:text-copper-light" href={`tel:${PHONE_TEL}`}>{PHONE_DISPLAY}</a> <span class="text-white/40">(placeholder)</span></li>
+          <li><a class="hover:text-copper-light" href={`mailto:${EMAIL}`}>{EMAIL}</a></li>
+          <li><a class="hover:text-copper-light" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-wide text-copper-light">Site</p>
+        <ul class="mt-3 space-y-2 text-sm text-white/80">
+          <li><a class="hover:text-copper-light" href={withBase('')}>Home</a></li>
+          <li><a class="hover:text-copper-light" href={withBase('contact/')}>Contact</a></li>
+          <li><a class="hover:text-copper-light" href={withBase('privacy/')}>Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="mt-10 border-t border-white/10 pt-6 text-xs text-white/50">
+      © {year} {SITE_NAME}. Based in Dublin, Ireland.
+    </p>
+  </div>
+</footer>

@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { EMAIL, SITE_NAME } from '../lib/site';
+---
+<BaseLayout title="Privacy" description="Privacy information for O'Rourke Heating & Plumbing.">
+  <section class="section-pad">
+    <div class="container-narrow max-w-3xl prose-like">
+      <h1 class="font-display text-4xl font-semibold text-navy">Privacy</h1>
+      <p class="mt-4 text-charcoal-light leading-relaxed">
+        This is a short stub. {SITE_NAME} does not use analytics cookies or tracking pixels on this site.
+      </p>
+      <p class="mt-3 text-charcoal-light leading-relaxed">
+        If you contact us by phone, WhatsApp, email or the demo form, we use your details only to respond to your enquiry and carry out the work you ask for.
+      </p>
+      <p class="mt-3 text-charcoal-light leading-relaxed">
+        Questions: <a class="font-semibold text-copper hover:underline" href={`mailto:${EMAIL}`}>{EMAIL}</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>
