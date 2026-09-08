@@ -10,17 +10,20 @@ const logoSrc = withBase('logo-mark.webp');
   <div class="container-narrow flex items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
     <a
       href={homeHref}
-      class="group flex min-h-[44px] items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-copper"
-      aria-label={SITE_NAME}
+      class="group flex min-h-[44px] items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-copper"
     >
       <img
         src={logoSrc}
-        width="480"
-        height="117"
+        width="143"
+        height="256"
         alt=""
-        class="h-10 w-auto max-w-[min(100%,14rem)] object-contain sm:h-11 sm:max-w-[18rem]"
+        class="h-10 w-auto shrink-0 object-contain sm:h-11"
         decoding="async"
       />
+      <span class="flex flex-col">
+        <span class="font-display text-lg font-semibold tracking-tight sm:text-xl">{SITE_NAME}</span>
+        <span class="text-xs text-white/70">Dublin · Ireland</span>
+      </span>
     </a>
     <nav class="hidden items-center gap-6 sm:flex" aria-label="Primary">
       <a
