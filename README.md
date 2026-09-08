@@ -18,7 +18,7 @@ npm run build
 npm run preview
 ```
 
-The production build outputs to `dist/` with asset URLs under /orourheheatingplumbing/.
+The production build outputs to `dist/` with asset URLs under /orourkeheatingplumbing/.
 
 ## GitHub Pages deploy
 
@@ -56,4 +56,4 @@ Site URL shape: https://c14427818.github.io/orourkeheatingplumbing/
 
 ## Design
 
-Navy (#0B1F33), charcoal, white, copper accent (#C4813A). Fonts: **Fraunces** (headings) + **DM Sans** (body). Sticky mobile Call | WhatsApp bar (min 44px taps).
+Navy (#0B1F33), charcoal, white, copper accent (#8B4E1F). Fonts: **Fraunces** (headings) + **DM Sans** (body). Sticky mobile Call | WhatsApp bar (min 44px taps).

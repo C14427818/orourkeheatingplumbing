@@ -13,8 +13,8 @@ export const SITE_NAME = "O'Rourke Heating & Plumbing";
 export const SITE_TAGLINE =
   "Dublin heating & plumbing. We'll travel Ireland for the bigger jobs.";
 
-/** Base path for GitHub Pages project site */
-export const BASE = '/orourkeheatingplumbing/';
+/** Base path from Astro config (`base`) — do not hardcode. */
+export const BASE = import.meta.env.BASE_URL;
 
 export function withBase(path: string): string {
   const clean = path.startsWith('/') ? path.slice(1) : path;

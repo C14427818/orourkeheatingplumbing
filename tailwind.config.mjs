@@ -14,9 +14,9 @@ export default {
           light: '#4A5259',
         },
         copper: {
-          DEFAULT: '#C4813A',
-          dark: '#A66B2E',
-          light: '#D4A05C',
+          DEFAULT: '#8B4E1F',
+          dark: '#6F3E18',
+          light: '#C4813A',
         },
       },
       fontFamily: {
