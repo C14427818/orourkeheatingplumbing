@@ -10,17 +10,20 @@ const logoSrc = withBase('logo-header.webp');
   <div class="container-narrow flex items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
     <a
       href={homeHref}
-      class="group flex min-h-[44px] items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-copper"
+      class="group flex min-h-[44px] max-w-[min(100%,18rem)] flex-col justify-center gap-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-copper sm:max-w-[22rem]"
       aria-label={SITE_NAME}
     >
       <img
         src={logoSrc}
-        width="1100"
-        height="290"
+        width="900"
+        height="196"
         alt=""
-        class="h-10 w-auto max-w-[min(100%,15rem)] object-contain sm:h-12 sm:max-w-[20rem]"
+        class="h-11 w-auto max-w-full object-contain object-left sm:h-12"
         decoding="async"
       />
+      <span class="text-[10px] font-semibold uppercase tracking-[0.14em] text-white/75 sm:text-[11px]">
+        Serving Dublin &amp; across Ireland
+      </span>
     </a>
     <nav class="hidden items-center gap-6 sm:flex" aria-label="Primary">
       <a
