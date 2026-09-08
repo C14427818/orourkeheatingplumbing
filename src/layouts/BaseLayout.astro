@@ -11,7 +11,7 @@ interface Props {
 }
 const {
   title = SITE_NAME,
-  description = "Dublin heating and plumbing. Brother-run Irish firm — call or WhatsApp for boilers, leaks, drains and bathrooms.",
+  description = "Dublin heating and plumbing. Irish family firm — call or WhatsApp for boilers, leaks, drains and bathrooms.",
 } = Astro.props;
 const pageTitle = title === SITE_NAME ? title : `${title} | ${SITE_NAME}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
