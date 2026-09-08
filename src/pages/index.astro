@@ -42,23 +42,36 @@ const steps = [
       </svg>
     </div>
     <div class="container-narrow relative section-pad !pb-20 !pt-16 lg:!pt-24">
-      <p class="text-sm font-semibold uppercase tracking-widest text-copper-light">Heating &amp; plumbing</p>
-      <h1 id="hero-heading" class="mt-3 max-w-3xl font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-        {SITE_NAME}
-      </h1>
-      <p class="mt-5 max-w-2xl text-xl text-white/90 sm:text-2xl">
-        Reliable heating and plumbing — done properly, explained plainly.
-      </p>
-      <p class="mt-4 max-w-xl text-base text-white/70 sm:text-lg">
-        {SITE_TAGLINE}
-      </p>
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a href={`tel:${PHONE_TEL}`} class="btn-copper min-h-[48px] text-lg">
-          Call {PHONE_DISPLAY}
-        </a>
-        <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" class="btn-outline-light min-h-[48px] text-lg">
-          WhatsApp us
-        </a>
+      <div class="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_auto]">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-widest text-copper-light">Heating &amp; plumbing</p>
+          <h1 id="hero-heading" class="mt-3 max-w-3xl font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+            {SITE_NAME}
+          </h1>
+          <p class="mt-5 max-w-2xl text-xl text-white/90 sm:text-2xl">
+            Reliable heating and plumbing — done properly, explained plainly.
+          </p>
+          <p class="mt-4 max-w-xl text-base text-white/70 sm:text-lg">
+            {SITE_TAGLINE}
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href={`tel:${PHONE_TEL}`} class="btn-copper min-h-[48px] text-lg">
+              Call {PHONE_DISPLAY}
+            </a>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" class="btn-outline-light min-h-[48px] text-lg">
+              WhatsApp us
+            </a>
+          </div>
+        </div>
+        <img
+          src={withBase("logo-hero.webp")}
+          width="288"
+          height="288"
+          alt=""
+          class="mx-auto h-auto w-56 shrink-0 object-contain sm:w-64 lg:mx-0 lg:w-72"
+          decoding="async"
+          fetchpriority="high"
+        />
       </div>
     </div>
   </section>
